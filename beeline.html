@@ -6,8 +6,9 @@
         <title>remove</title>
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
-                var toolbar = document.getElementById('toolbar');
-                if (toolbar && toolbar.firstElementChild.getAttribute('src').test(/beeline/)) {
+                var toolbar = document.getElementById('toolbar'),
+                    iframe = toolbar && toolbar.firstElementChild;
+                if (iframe && /beeline/.test(iframe.getAttribute('src'))) {
                     // beeline
                     toolbar.parentNode.removeChild(toolbar);
                 }
