@@ -5,20 +5,21 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>remove</title>
         <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-                var toolbar = document.getElementById('toolbar'),
-                    iframe = toolbar && toolbar.firstElementChild;
-                if (iframe && /beeline/.test(iframe.getAttribute('src'))) {
-                    // beeline
-                    toolbar.parentNode.removeChild(toolbar);
-                }
-            });
-                var script = document.querySelector('script[name=ets-anchor]');
-                if (script) {
-                    script.parentNode.removeChild(script);
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            var toolbar = document.getElementById('toolbar'),
+                iframe = toolbar && toolbar.firstElementChild;
+            if (iframe && /beeline/.test(iframe.getAttribute('src'))) {
+                toolbar.parentNode.removeChild(toolbar);
+            }
+        });
         </script>
     </head>
     <body>
+        <script>
+        var script = document.querySelector('script[name=ets-anchor]');
+        if (script) {
+            script.parentNode.removeChild(script);
+        }
+        </script>
     </body>
 </html>
