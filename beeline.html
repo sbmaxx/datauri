@@ -4,6 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>remove</title>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                var toolbar = document.getElementById('toolbar');
+                if (toolbar && toolbar.firstElementChild.getAttribute('src').test(/beeline/)) {
+                    // beeline
+                    toolbar.parentNode.removeChild(toolbar);
+                }
+            });
+        </script>
     </head>
     <body>
     </body>
